@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobBoard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>JobBoard</h1>
+<span>Find your next role</span>
+</header>
+
+<div class="hero">
+
+<h2>Browse Open Positions</h2>
+<p>Connecting job seekers with companies hiring now.</p>
+
+<div class="hero-stats">
+
+<div>
+<strong id="heroCount">12</strong>
+<small>Open Roles</small>
+</div>
+
+<div>
+<strong>12</strong>
+<small>Companies</small>
+</div>
+
+<div>
+<strong>48h</strong>
+<small>Avg. Response</small>
+</div>
+
+</div>
+</div>
+
+<div class="filters">
+
+<div class="filters-row">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search by job title or company..."
+oninput="renderJobs()">
+
+<select id="typeFilter" onchange="renderJobs()">
+<option value="">All Types</option>
+<option value="Remote">Remote</option>
+<option value="On-site">On-site</option>
+</select>
+
+<select id="salaryFilter" onchange="renderJobs()">
+<option value="">Any Salary</option>
+<option value="0-80000">Up to Rs 80k</option>
+<option value="80000-120000">Rs 80k – Rs 120k</option>
+<option value="120000-160000">Rs 120k – Rs 160k</option>
+<option value="160000-999999">Rs 160k+</option>
+</select>
+
+<span id="resultsCount">12 results</span>
+
+</div>
+</div>
+
+<main>
+
+<p class="section-label">Job Listings</p>
+
+<div class="jobs-grid" id="jobsGrid"></div>
+
+</main>
+
+<div class="modal-overlay" id="modalOverlay">
+
+<div class="modal">
+
+<div class="modal-header">
+<strong id="modalJobTitle"></strong>
+<button onclick="closeModal()">X</button>
+</div>
+
+<div class="modal-body" id="modalBody"></div>
+
+</div>
+</div>
+
+<footer>
+© 2025 JobBoard — All rights reserved
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
